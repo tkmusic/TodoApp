@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/tonikrug/RiderProjects/TodoApp/TodoApp/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/tonikrug/RiderProjects/TodoApp/TodoApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/tonikrug/RiderProjects/TodoApp/TodoApp/Views/Todos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kb3MvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/tonikrug/RiderProjects/TodoApp/TodoApp/Views/Todos/ShowSearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kb3MvU2hvd1NlYXJjaEZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/tonikrug/RiderProjects/TodoApp/TodoApp/Views/_ViewImports.cshtml]

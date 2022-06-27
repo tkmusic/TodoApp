@@ -25,6 +25,8 @@
     <ItemGroup>
       <Compile Remove="Controllers\TodoController.cs" />
       <Compile Remove="Migrations\**" />
+      <Compile Remove="Views\ShowSearchForm.cshtml.cs" />
+      <Compile Remove="Views\Todos\ShowSearchForm.cshtml.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -33,6 +35,7 @@
 
     <ItemGroup>
       <Content Remove="Migrations\**" />
+      <Content Remove="Views\ShowSearchForm.cshtml" />
     </ItemGroup>
 
 </Project>

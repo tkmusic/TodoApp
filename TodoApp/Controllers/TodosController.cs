@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,20 @@ namespace TodoApp.Controllers
                           View(await _context.Todo.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Todo'  is null.");
         }
+        // GET: Todos/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+        }
+        
+        // Post: Todos/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(string SearchPhrase)
+        {
+            return _context.Todo != null ? 
+                View("Index", await _context.Todo.Where( j => j.TodoDescription.Contains(SearchPhrase) 
+                                                              || j.TodoTitle.Contains(SearchPhrase)).ToListAsync()) :
+                Problem("Entity set 'ApplicationDbContext.Todo'  is null.");
+        }
 
         // GET: Todos/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -46,6 +61,7 @@ namespace TodoApp.Controllers
         }
 
         // GET: Todos/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +70,7 @@ namespace TodoApp.Controllers
         // POST: Todos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,TodoTitle,TodoDescription")] Todo todo)
